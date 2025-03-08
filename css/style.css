@@ -1,0 +1,479 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Налаштування плавної прокрутки та повної висоти сторінки */
+html {
+  scroll-behavior: smooth; /* Плавна прокрутка при кліку на якорі */
+  height: 100%; 
+  scroll-padding-top: 80px; 
+}
+
+/* Для всього сайту */
+body {
+  background-color: #f9f7f5; 
+  color: #333; 
+  line-height: 1.6; 
+  font-family: 'Arial', sans-serif;
+  min-height: 100%; 
+  display: flex; 
+  flex-direction: column; 
+}
+
+h1, h2, h3 {
+  color: #4a6741; 
+  margin-bottom: 20px; 
+}
+
+h1 {
+  font-size: 32px;
+  border-bottom: 2px solid #f0f0f0; /* Лінія під заголовком */
+  padding-bottom: 10px;
+}
+
+h2 {
+  font-size: 28px; 
+  margin-top: 30px;
+}
+
+h3 {
+  font-size: 22px; 
+  margin-top: 25px; 
+}
+
+p {
+  margin-bottom: 20px; 
+  font-size: 18px;
+}
+
+ul {
+  margin-left: 25px;
+  margin-bottom: 20px;
+}
+
+ul li {
+  margin-bottom: 8px; 
+  position: relative;
+}
+
+/* Загальні стилі для посилань */
+a {
+  color: #5a8b41; 
+  text-decoration: none; 
+  transition: all 0.3s ease; /* Плавний перехід при наведенні */
+  position: relative; 
+}
+
+/* Стиль для посилань при наведенні */
+a:hover {
+  color: #3d6e24;
+  text-decoration: underline; /* Підкреслення при наведенні */
+}
+
+/* Стилі для зовнішніх посилань */
+a[href^="http"],
+a[href^="https"],
+a[href^="mailto:"],
+a[href^="tel:"] {
+  color: #23733f;
+  font-weight: 600; 
+}
+
+/* Меню */
+header {
+  padding: 20px 0; 
+  background-color: #fff; 
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Тінь для виділення */
+  position: sticky; 
+  top: 0;
+  z-index: 100; /* Високий z-index, щоб меню було над іншими елементами */
+  width: 100%; 
+}
+
+/* Стилі для навігаційного меню */
+nav ul {
+  display: flex; 
+  justify-content: center; 
+  list-style: none;
+  flex-wrap: wrap; 
+  margin-left: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+nav li {
+  margin: 0 15px; 
+}
+
+/* Стилі для посилань у навігаційному меню */
+nav a {
+  text-decoration: none; 
+  color: #555;
+  font-weight: 600;
+  font-size: 18px; 
+  transition: color 0.3s; 
+  padding: 5px 10px; 
+  position: relative; 
+}
+
+/* Меню при наведенні */
+nav a:hover {
+  color: #6b8e4e; 
+  text-decoration: none; 
+}
+
+/* Анімація для меню */
+nav a::after {
+  content: ''; 
+  position: absolute; 
+  width: 0; 
+  height: 2px; 
+  bottom: 0; 
+  left: 0; 
+  background-color: #6b8e4e; 
+  transition: width 0.3s; /* Анімація зміни ширини */
+}
+
+/* Розширення підкреслення при наведенні */
+nav a:hover::after {
+  width: 100%;
+}
+
+main {
+  padding: 40px; 
+  margin: 20px auto;
+  max-width: 1200px; 
+  width: 100%; 
+
+}
+
+/* Футер */
+footer {
+  text-align: center; 
+  padding: 20px 0; 
+  border-top: 1px solid #eee; 
+  color: #777; 
+  font-size: 14px; 
+  max-width: 1200px; 
+  width: 100%; 
+  margin: auto auto 0;
+}
+
+/* Галерея */
+.gallery {
+  display: grid; 
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 25px;
+  margin: 30px 0; 
+}
+
+.gallery figure {
+  border-radius: 8px; 
+  overflow: hidden; 
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); 
+  background-color: #fff; 
+  height: 100%; 
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery figure a {
+  overflow: hidden; 
+  display: block; 
+  flex: 1;
+}
+
+.gallery img {
+  width: 100%; 
+  height: 250px;
+  object-fit: cover; 
+  display: block; 
+  transition: transform 0.3s; /* Плавна анімація при наведенні */
+}
+
+/* Ефект масштабування при наведенні */
+.gallery figure:hover img {
+  transform: scale(1.05);
+}
+
+.gallery figcaption {
+  padding: 12px; 
+  text-align: center; 
+  font-size: 14px; 
+  color: #000000; 
+  background-color: #fff; 
+}
+
+/* Контакти */
+form {
+  max-width: 800px; 
+  margin: 30px auto;
+  background-color: #fff; 
+  padding: 30px; 
+  border-radius: 8px; 
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); 
+}
+
+fieldset {
+  border: 1px solid #759553; 
+  border-radius: 5px; 
+  padding: 20px;
+  margin-bottom: 25px;
+}
+
+legend {
+  font-weight: 600;
+  color: #4a6741; 
+  padding: 0 10px; 
+  font-size: 20px; 
+}
+
+form div {
+  margin-bottom: 15px; 
+}
+
+form label {
+  display: block; 
+  margin-bottom: 5px; 
+  font-weight: 600; 
+  color: #555;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form input[type="date"],
+form select,
+form textarea {
+  width: 100%; 
+  padding: 10px; 
+  border: 1px solid #ddd; 
+  border-radius: 5px;
+  font-size: 16px; 
+  box-sizing: border-box;
+}
+
+/* Поля форми у фокусі */
+form input:focus,
+form textarea:focus,
+form select:focus {
+  border-color: #6b8e4e; 
+  outline: none; 
+}
+
+form small {
+  display: block; 
+  color: #777; 
+  font-size: 12px; 
+  margin-top: 5px;
+}
+
+/* Радіокнопки та прапорці */
+form input[type="radio"],
+form input[type="checkbox"] {
+  margin-right: 8px; 
+}
+
+form input[type="radio"] + label,
+form input[type="checkbox"] + label {
+  display: inline-block; 
+  font-weight: normal; 
+  margin-bottom: 10px; 
+}
+
+/* Стилі для кнопок форми */
+form button {
+  background-color: #6b8e4e; 
+  color: white; 
+  border: none; 
+  padding: 12px 25px; 
+  font-size: 16px; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  transition: background-color 0.3s; 
+  margin-right: 10px; 
+  margin-top: 15px; 
+}
+
+/* Стилі для кнопок при наведенні */
+form button:hover {
+  background-color: #5a7b40; 
+}
+
+/* Кнопка скидання форми */
+form button[type="reset"] {
+  background-color: #f9f7f5; 
+  color: #555; 
+  border: 1px solid #ddd; 
+}
+
+/* Кнопка скидання при наведенні */
+form button[type="reset"]:hover {
+  background-color: #eee; 
+}
+
+
+/* Якорі */
+.table-of-contents {
+  background-color: #f2f7ee; 
+  border-radius: 8px; 
+  padding: 25px;
+  margin: 30px 0; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); 
+  border-left: 4px solid #6b8e4e;
+}
+
+.toc-title {
+  margin-top: 0; 
+  padding-bottom: 10px;
+}
+
+.toc-list {
+  margin-left: 30px; 
+}
+
+.toc-list ul {
+  margin-top: 8px; 
+  margin-bottom: 15px; 
+}
+
+.toc-list a {
+  color: #5a8b41; 
+  font-weight: 500; 
+  transition: all 0.3s;
+  display: inline-block; 
+  padding: 3px 5px; 
+  border-radius: 3px; 
+}
+
+.toc-list a:hover {
+  background-color: #e8f3df; 
+  text-decoration: none; 
+  padding-left: 8px;
+}
+
+.anchor-section {
+  padding-top: 20px;
+  margin-bottom: 40px; 
+  border-bottom: 1px solid #bcb8b8; 
+  padding-bottom: 30px; 
+}
+
+/* "Повернутися до змісту" */
+a[href="#top"] {
+  display: inline-block; 
+  color: #6b8e4e; 
+  text-decoration: none; 
+  font-weight: 600;
+  margin-top: 10px;
+  transition: all 0.3s; 
+  position: relative;
+  padding-left: 20px;
+  background-color: #f2f7ee; 
+  padding: 6px 12px 6px 25px;
+  border-radius: 5px; 
+}
+
+a[href="#top"]:hover {
+  background-color: #e0edd2; 
+  text-decoration: none; 
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1); 
+}
+
+/* Статті */
+.article-section {
+  margin-bottom: 50px; 
+}
+
+.section-title {
+  color: #4a6741; 
+  font-size: 28px;
+  border-bottom: 2px solid #87b05b; 
+  padding-bottom: 12px; 
+  margin-bottom: 30px; 
+}
+
+/* Сітка для статей */
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); /* Адаптивні колонки */
+  gap: 30px; 
+  margin-top: 25px;
+}
+
+.article-card {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden; 
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08); 
+  display: flex; 
+  flex-direction: column; 
+  height: 100%; /
+}
+
+.article-image {
+  height: 200px; 
+  background-color: #f2f7ee; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  color: #6b8e4e; 
+  font-weight: 500;
+  border-bottom: 1px solid #e0edd2;
+}
+
+.article-content {
+  padding: 20px; 
+  flex-grow: 1; 
+  display: flex; 
+  flex-direction: column; 
+}
+
+.article-content h3 {
+  color: #4a6741; 
+  font-size: 20px;
+  margin-top: 0; 
+  margin-bottom: 15px; 
+}
+
+.article-content p {
+  color: #555; 
+  margin-bottom: 15px; 
+  line-height: 1.5; 
+  flex-grow: 1; 
+}
+
+.read-more {
+  display: inline-block; 
+  color: #5a8b41; 
+  font-weight: 600; 
+  text-decoration: none; 
+  padding: 8px 0; 
+  position: relative; 
+  align-self: flex-start; 
+  transition: all 0.3s ease; 
+}
+
+.read-more::after {
+  content: "→"; 
+  margin-left: 5px; 
+  transition: margin-left 0.3s ease; /* Анімація відступу */
+}
+
+/* "Читати далі" при наведенні */
+.read-more:hover {
+  color: #3d6e24; 
+  text-decoration: none; /
+}
+
+/* Рух стрілки вправо при наведенні */
+.read-more:hover::after {
+  margin-left: 10px; 
+}
+
+.article-image img {
+  width: 100%;
+  height: 100%; 
+  object-fit: cover;
+}

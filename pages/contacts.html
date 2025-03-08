@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контакти</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Головна</a></li>
+        <li><a href="about.html">Про мене</a></li>
+        <li><a href="articles.html">Статті</a></li>
+        <li><a href="gallery.html">Галерея</a></li>
+        <li><a href="contacts.html">Контакти</a></li>
+        <li><a href="anchors.html">Якорі</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Контакти</h1>
+    <h2>Зв'яжіться зі мною 💖</h2>
+    <p>Якщо у вас є запитання, пропозиції або ви просто хочете поспілкуватися, заповніть форму нижче:</p>
+
+    <form action="/submit-form" method="post">
+      <fieldset>
+        <legend>Особисті дані</legend>
+
+        <div>
+          <label for="name">Ім'я:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+
+        <div>
+          <label for="surname">Прізвище:</label>
+          <input type="text" id="surname" name="surname">
+        </div>
+
+        <div>
+          <label for="email">Електронна пошта:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div>
+          <label for="phone">Телефон:</label>
+          <input type="tel" id="phone" name="phone" pattern="[0-9]{10}">
+          <small>Формат: 0931234567</small>
+        </div>
+
+        <div>
+          <label for="birth-date">Дата народження:</label>
+          <input type="date" id="birth-date" name="birth-date">
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Інформація про повідомлення</legend>
+
+        <div>
+          <label for="subject">Тема:</label>
+          <select id="subject" name="subject" required>
+            <option value="">Оберіть тему</option>
+            <option value="cooperation">Співпраця</option>
+            <option value="question">Запитання</option>
+            <option value="suggestion">Пропозиція</option>
+            <option value="other">Інше</option>
+          </select>
+        </div>
+        <div>
+          <p>Як ви дізналися про мене?</p>
+          <input type="radio" id="source-college" name="source" value="college">
+          <label for="source-college">Коледж</label><br>
+
+          <input type="radio" id="source-social" name="source" value="social">
+          <label for="source-social">Соціальні мережі</label><br>
+
+          <input type="radio" id="source-friends" name="source" value="friends">
+          <label for="source-friends">Від друзів</label><br>
+
+          <input type="radio" id="source-other" name="source" value="other">
+          <label for="source-other">Інше</label>
+        </div>
+
+        <div>
+          <p>Які теми вас цікавлять?</p>
+          <input type="checkbox" id="topic-html" name="topics" value="html">
+          <label for="topic-html">HTML/CSS</label><br>
+
+          <input type="checkbox" id="topic-js" name="topics" value="js">
+          <label for="topic-js">JavaScript</label><br>
+
+          <input type="checkbox" id="topic-python" name="topics" value="python">
+          <label for="topic-python">Python</label><br>
+
+          <input type="checkbox" id="topic-cats" name="topics" value="cats">
+          <label for="topic-cats">Котики</label><br>
+        </div>
+
+        <div>
+          <label for="message">Повідомлення:</label><br>
+          <textarea id="message" name="message" rows="5" cols="30" required></textarea>
+        </div>
+
+        <div>
+          <label for="file">Додаткові файли:</label>
+          <input type="file" id="file" name="file">
+        </div>
+      </fieldset>
+
+      <div>
+        <input type="checkbox" id="agreement" name="agreement" required>
+        <label for="agreement">Я згоден/згодна з умовами використання</label>
+      </div>
+
+      <div>
+        <button type="reset">Очистити</button>
+        <button type="submit">Надіслати</button>
+      </div>
+    </form>
+
+    <h3>Інші способи зв'язку</h3>
+    <ul>
+      <li>Email: dimsofia10@gmail.com</li>
+      <li>GitHub: github.com/sophdi</li>
+    </ul>
+  </main>
+  </main>
+  <footer>
+    <p>&copy; 2025 SofiiTech 🍵 </p>
+  </footer>
+</body>
+
+</html>
